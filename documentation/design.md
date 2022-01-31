@@ -58,7 +58,9 @@ cons:
 3. once deployed, monitor every chnge to a function.
 4. Run tests according to configuration after  every change.
 5. collect results from cloudwatch, sonarqube and possibly any other testing tool and dump it into a database.
-6. Use grafana to display the different results.    
+6. Use grafana to display the different results. 
+7. [k6](https://k6.io/docs/) can be used to test and collect the different metrics.( inspired by [Microservices vs Serverless: A Performance Comparison on a
+Cloud-native Web Application](https://www.scitepress.org/Papers/2020/97927/97927.pdf) )
 
 # Stretch Goals.
 
