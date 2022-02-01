@@ -7,6 +7,7 @@
 * As a user, I can specify the metrics to be collected
 * As a user, I can view different visualizations of the data
 * As a user, I expect the franework to test and collect results after every change to any function (i.e Add, delete, update).
+* As a user, I expect metrics in the following categories: platform-centric, user-centric and misc.
 
 # Non technical requirements
 
