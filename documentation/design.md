@@ -53,10 +53,27 @@ pros:
 cons:
 * Billed during inactive time.
 
-# rough plan (First Draft).
+## Sequence Diagrams
+## Dashboard and Test invokation Flow
+![Sequence diagram for the general flow](./view_dashboard.png "Sequence diagram for the general flow")
+
+## CRUD Operation Flow
+![Sequence diagram for CRUD Operation](./CRUD_operations.png "Sequence diagram for CRUD Operation")
+
+## Design choice
+
+After carefully reviewing the different viable options, we excluded option 1, due to runtime limitations within the ci/cd and the complexeties that would be introduced to get the desired output (e.g. mainly relying on cli commands and different scripts and the overhead of configuring runners if we need to bypass the default runners offered by github).
+
+The language of choice is JavaScript/Typescript due to familiarity with the language and the slight performance benefits in cold boot compared to languages like java (at the moment of wirting this document).
+
+K6 will be used along with other testing tools, if we deem it necessary, to collect more metrics.
+
+sonarqube will be used to provide static code analysis (e.g. code smells, security threats, test coverage, etc).
+
+# rough plan.
 1. let the user input their test configurtion file.
 2. let the user define endpoints and pay loads.
-3. once deployed, monitor every chnge to a function.
+3. once deployed, monitor every chnge to a function.(This could be done via the CI/CD or web hooks or by manualky adding the endpoint to the list of endpoints to be tested).
 4. Run tests according to configuration after  every change.
 5. collect results from cloudwatch, sonarqube and possibly any other testing tool and dump it into a database.
 6. Use grafana to display the different results. 
