@@ -84,3 +84,10 @@ Cloud-native Web Application](https://www.scitepress.org/Papers/2020/97927/97927
 
 1. Add support for different cloud providers (Azure, Google Cloud)
 2. Improve security.
+
+# Development stack.
+In this section we discuss the different components of the stack that will be used to develop the testing framework.
+## Infrastructure as code.
+CDK will be used for infrastructure as code. This will make it easier for the framework stack to be deployed by anyone who wants to self host it and use it with their service.
+## Local environment
+For local development and testing, [LocalStack](https://github.com/localstack/localstack) will be used. The current languge of choise remains Typescript for <!-- insert reference why to use typescript ->
