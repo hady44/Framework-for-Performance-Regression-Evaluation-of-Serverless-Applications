@@ -1,0 +1,3 @@
+**/node_modules/
+**/lambda-layernode_modules/
+# cdk.out/
